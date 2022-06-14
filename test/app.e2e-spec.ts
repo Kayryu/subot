@@ -8,7 +8,7 @@ describe("AppController (e2e)", () => {
   let app: INestApplication;
 
   beforeEach(async () => {
-    await cryptoWaitReady()
+    await cryptoWaitReady();
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();

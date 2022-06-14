@@ -75,7 +75,7 @@ export class AppService {
   }
 
   private now(): number {
-    return Math.round(new Date().getTime()/1000)
+    return Math.round(new Date().getTime() / 1000);
   }
 
   @OnEvent("transfer.triggered")
@@ -103,8 +103,8 @@ export class AppService {
       this.lock = false;
     } else {
       if (this.now() - this.lockTime > this.LOCK_TIMEOUT) {
-        // Set the timeout period of the lock to avoid deadlocks 
-        // because the status cannot be changed due to disconnection 
+        // Set the timeout period of the lock to avoid deadlocks
+        // because the status cannot be changed due to disconnection
         // from the node.
         this.lock = false;
       }

@@ -11,7 +11,7 @@ describe("AppController", () => {
   let appController: AppController;
 
   beforeEach(async () => {
-    await cryptoWaitReady()
+    await cryptoWaitReady();
     const app: TestingModule = await Test.createTestingModule({
       imports: [
         ScheduleModule.forRoot(),
@@ -27,7 +27,7 @@ describe("AppController", () => {
   });
 
   it("(Time)", () => {
-    let time = Math.round(new Date().getTime()/1000)
+    let time = Math.round(new Date().getTime() / 1000);
     console.log("Unix time:", time);
   });
 });
